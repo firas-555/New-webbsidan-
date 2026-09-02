@@ -63,6 +63,23 @@ function skickaFeedback() {
   window.location.href = "mailto:firjasem017@gmail.com?subject=Feedback från The Best of Live&body=" + text;
 }
 </script>
+<script>
+function slumpaUpplevelse() {
+
+  var upplevelser = [
+    "🎤 Gå på en konsert!",
+    "✈️ Upptäck en ny stad!",
+    "🎵 Lyssna på ny musik!",
+    "🌍 Planera ditt nästa äventyr!",
+    "🎸 Upptäck en ny artist!",
+    "✨ Gör något du aldrig gjort förut!"
+  ];
+
+  var slump = Math.floor(Math.random() * upplevelser.length);
+
+  document.getElementById("upplevelse").innerHTML = upplevelser[slump];
+}
+</script>
 </body>
 </html>
 ```

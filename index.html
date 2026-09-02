@@ -78,6 +78,12 @@ function slumpaUpplevelse() {
   var slump = Math.floor(Math.random() * upplevelser.length);
 
   document.getElementById("upplevelse").innerHTML = upplevelser[slump];
+
+document.getElementById("upplevelse").style.transform = "scale(1.2)";
+
+setTimeout(function() {
+  document.getElementById("upplevelse").style.transform = "scale(1)";
+}, 300);
 }
 </script>
 </body>

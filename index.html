@@ -33,18 +33,28 @@
 
   <h2 style="font-family: Arial;">💬 Feedback</h2>
 
-  <input type="text" placeholder="Ditt namn" style="width: 90%; padding: 8px;">
+  <input id="namn" type="text" placeholder="Ditt namn" style="width: 90%; padding: 8px;">
 
   <br><br>
 
-  <textarea placeholder="Skriv din kommentar..." style="width: 90%; height: 100px; padding: 8px;"></textarea>
+  <textarea id="feedback" placeholder="Skriv din kommentar..." style="width: 90%; height: 100px; padding: 8px;"></textarea>
 
   <br><br>
 
-  <button onclick="alert('Tack för din feedback! ❤️')" style="padding: 12px 30px; font-size: 17px; border: none; border-radius: 12px; cursor: pointer; background-color: lightblue;">Skicka</button>
+  <button onclick="skickaFeedback()" style="padding: 12px 30px; font-size: 17px; border: none; border-radius: 12px; cursor: pointer; background-color: lightblue;">Skicka</button>
 
 </div>
 
+<script>
+function skickaFeedback() {
+  var namn = document.getElementById("namn").value;
+  var feedback = document.getElementById("feedback").value;
+
+  var text = "Hej!%0A%0ANamn: " + encodeURIComponent(namn) + "%0A%0AFeedback: " + encodeURIComponent(feedback);
+
+  window.location.href = "mailto:firjasem017@gmail.com?subject=Feedback från The Best of Live&body=" + text;
+}
+</script>
 </body>
 </html>
 ```

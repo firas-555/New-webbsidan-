@@ -72,9 +72,9 @@ function slumpaUpplevelse() {
     "https://www.nationalgeographic.com/travel"
   ];
 
-  var slump = Math.floor(Math.random() * upplevelser.length);
+ var slump = Math.floor(Math.random() * upplevelser.length);
 
-  window.location.href = upplevelser[slump];
+document.getElementById("upplevelse").innerHTML = "🎉 Du fick: " + upplevelser[slump];
 }
 </script>
 

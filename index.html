@@ -71,20 +71,32 @@ function slumpaUpplevelse() {
     "https://www.nationalgeographic.com/travel"
   ];
 
+ <script>
+function skickaFeedback() {
+  var namn = document.getElementById("namn").value;
+  var feedback = document.getElementById("feedback").value;
+
+  var text = "Hej!%0A%0ANamn: " + encodeURIComponent(namn) + "%0A%0AFeedback: " + encodeURIComponent(feedback);
+
+  window.location.href = "mailto:firjasem017@gmail.com?subject=Feedback från The Best of Live&body=" + text;
+}
+
+function slumpaUpplevelse() {
+
+  var upplevelser = [
+    "https://www.spotify.com/",
+    "https://www.ticketmaster.se/",
+    "https://www.nationalgeographic.com/travel"
+  ];
+
   var slump = Math.floor(Math.random() * upplevelser.length);
 
   window.open(upplevelser[slump], "_blank");
 }
-  var slump = Math.floor(Math.random() * upplevelser.length);
+</script>
 
-  document.getElementById("upplevelse").innerHTML = upplevelser[slump];
-
-document.getElementById("upplevelse").style.transform = "scale(1.2)";
-
-setTimeout(function() {
-  document.getElementById("upplevelse").style.transform = "scale(1)";
-}, 300);
-}
+</body>
+</html>
 </script>
 </body>
 </html>

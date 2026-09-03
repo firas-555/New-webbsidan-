@@ -64,6 +64,7 @@ function skickaFeedback() {
   window.location.href = "mailto:firjasem017@gmail.com?subject=Feedback från The Best of Live&body=" + text;
 }
 
+```javascript
 function slumpaUpplevelse() {
 
   var upplevelser = [
@@ -72,10 +73,17 @@ function slumpaUpplevelse() {
     "https://www.nationalgeographic.com/travel"
   ];
 
- var slump = Math.floor(Math.random() * upplevelser.length);
+  var slump = Math.floor(Math.random() * upplevelser.length);
 
-document.getElementById("upplevelse").innerHTML = "🎉 Du fick: " + upplevelser[slump];
+  document.getElementById("upplevelse").innerHTML =
+    "🎉 Tryck igen för att öppna din upplevelse!";
+
+  document.getElementById("upplevelse").onclick = function() {
+    window.location.href = upplevelser[slump];
+  };
 }
+```
+
 </script>
 
 </body>

@@ -75,8 +75,7 @@ function slumpaUpplevelse() {
   var slump = Math.floor(Math.random() * upplevelser.length);
 
   document.getElementById("upplevelse").innerHTML =
-    "🎉 Tryck igen för att öppna din upplevelse!";
-
+    "🎉 Tryck här! 👆";
   document.getElementById("upplevelse").onclick = function() {
     window.location.href = upplevelser[slump];
   };
